@@ -1,3 +1,3 @@
 #! /usr/bin/env node
-
-console.log('Welcome to the Brain Games!');
+import {playerGreeting} from '../index.js';
+playerGreeting();
