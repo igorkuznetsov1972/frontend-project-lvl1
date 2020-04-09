@@ -2,10 +2,14 @@
   "name": "frontend-project-lvl1",
   "version": "1.0.0",
   "description": "first hexlet project",
-  "main": "./bin/brain-games.js",
+  "main": "./src/index.js",
+  "bin": {
+    "brain-games": "./bin/brain-games.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/igorkuznetsov1972/frontend-project-lvl1.git"
