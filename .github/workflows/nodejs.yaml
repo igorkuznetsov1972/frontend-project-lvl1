@@ -1,0 +1,17 @@
+# Name of workflow
+name: Linting
+
+# Trigger the workflow on push or pull request
+on:
+  - push
+  - pull_request
+
+jobs:
+         # Add environment variables
+        # env:
+        # CI: true
+      - name: Run linter
+        # Run Linter
+        run: |
+          make lint
+      
