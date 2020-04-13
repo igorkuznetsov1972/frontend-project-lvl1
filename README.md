@@ -7,4 +7,4 @@ This repository is created as a first training project by Igor Kuznetsov studyin
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
-![](https://github.com/igorkuznetsov1972/frontend-project-lvl1.git/Linting/badge.svg)
+[![LinterCheck](https://github.com/igorkuznetsov1972/frontend-project-lvl1/workflows/LinterCheck/badge.svg?branch=master)
