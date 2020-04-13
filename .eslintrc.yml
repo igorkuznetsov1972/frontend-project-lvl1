@@ -15,5 +15,5 @@
   
   rules:
     no-console: 0
-    no-import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version */
+    import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version */
   
