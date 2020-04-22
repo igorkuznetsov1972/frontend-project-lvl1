@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import _ from 'lodash';
+import * as _ from 'lodash';
 
 const playEvenGame = () => {
   const isEven = (num) => (num % 2 === 0);
