@@ -27,7 +27,7 @@ Let's try again, ${playerName}!`);
 Let's try again, ${playerName}!`);
       break;
     } else {
-      console.log(`${currAnswer} is not an answer ;( \n
+      console.log(`"${currAnswer}" is not an answer ;( \n
 Let's try again, ${playerName}!`);
       break;
     }
