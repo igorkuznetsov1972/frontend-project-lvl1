@@ -26,6 +26,10 @@ Let's try again, ${playerName}!`);
       console.log(`"no" is wrong answer ;(. Correct answer was "yes".
 Let's try again, ${playerName}!`);
       break;
+    } else {
+      console.log(`${currAnswer} is not an answer ;( \n
+Let's try again, ${playerName}!`);
+      break;
     }
   }
 };
