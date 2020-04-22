@@ -16,6 +16,7 @@ const playEvenGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const num = _.random(1, 1000);
     const currAnswer = readlineSync.question(`Question: ${num} `);
+    if (isRightAnswer(num, currAnswer) && i === 2) console.log(`Correct! \n Congratulations, ${playerName}`);
     if (isRightAnswer(num, currAnswer)) console.log('Correct!');
     else if (currAnswer === 'yes') {
       console.log(`"yes" is wrong answer ;(. Correct answer was "no".
