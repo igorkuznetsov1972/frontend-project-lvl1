@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import * as _ from 'lodash';
+import { random } from 'lodash';
 
 const playEvenGame = () => {
   const isEven = (num) => (num % 2 === 0);
@@ -14,7 +14,7 @@ const playEvenGame = () => {
   console.log(`Hello, ${playerName}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
-    const num = _.random(1, 1000);
+    const num = random(1, 1000);
     const currAnswer = readlineSync.question(`Question: ${num} `);
     if (isRightAnswer(num, currAnswer)) console.log('Correct!');
     else if (currAnswer === 'yes') {
