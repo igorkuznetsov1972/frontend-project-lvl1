@@ -8,13 +8,13 @@ const playEvenGame = () => {
     if (!isEven(num) && answer === 'no') return true;
     return false;
   };
-  const numToPlayWith = () => _.random(1, 1000);
+  const numToPlayWith = _.random(1, 1000);
   console.log('Welcome to the Brain games!');
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
-    const num = numToPlayWith();
+    const num = numToPlayWith;
     const currAnswer = readlineSync.question(`Question: ${num} `);
     if (isRightAnswer(num, currAnswer)) console.log('Correct!');
     else if (currAnswer === 'yes') {
