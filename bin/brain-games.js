@@ -1,4 +1,4 @@
 #! /usr/bin/env node
-import playerGreeting from '../index.js';
+import playerGreeting from '../src/index.js';
 
 playerGreeting();
