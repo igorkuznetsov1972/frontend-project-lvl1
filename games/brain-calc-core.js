@@ -32,7 +32,9 @@ const playCalcGame = () => {
   const playerName = dialog.playerGreeting();
   console.log('What is the expectedAnswer of the expression ?');
   for (let i = 0; i < 3; i += 1) {
-    const { expectedAnswer, operator, firstNumber, secondNumber } = doCalcOperation();
+    const {
+      expectedAnswer, operator, firstNumber, secondNumber,
+    } = doCalcOperation();
     const currentAnswer = readlineSync.questionInt(`Question: ${firstNumber} ${operator} ${secondNumber} `);
     if (expectedAnswer === currentAnswer && i === 2) {
       dialog.lastCorrectAnswer(playerName);
