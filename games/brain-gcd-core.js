@@ -1,21 +1,6 @@
 import readlineSync from 'readline-sync';
-import _ from 'lodash';
+import findGcd from '../src/findGcd.js';
 import * as dialog from '../src/index.js';
-
-const findGcd = () => {
-  const firstNumber = _.random(1000);
-  const secondNumber = _.random(1000);
-  let a = firstNumber;
-  let b = secondNumber;
-  while (a !== 0 && b !== 0) {
-    if (a > b) a %= b;
-    else b %= a;
-  }
-  const expectedAnswer = a + b;
-  return {
-    expectedAnswer, firstNumber, secondNumber,
-  };
-};
 
 const playGcdGame = () => {
   const playerName = dialog.playerGreeting();
