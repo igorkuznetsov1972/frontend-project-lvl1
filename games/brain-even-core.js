@@ -16,7 +16,7 @@ const playEvenGame = () => {
     }
     if (expectedAnswer === currentAnswer) dialog.correctAnswer();
     else if (currentAnswer === 'yes' || currentAnswer === 'no') {
-      dialog.wrongAnswer(currentAnswer, expectedAnswer.playerName);
+      dialog.wrongAnswer(currentAnswer, expectedAnswer, playerName);
       break;
     } else {
       dialog.invalidAnswer(currentAnswer, playerName);
