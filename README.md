@@ -13,6 +13,9 @@ In our third game you should find the greater common divider of two numbers. [En
 
 In our fourth game you should  give the missing progression element. [Try it!](https://asciinema.org/a/SvBVMd0O8af74MQF2Run7Rz89)
 
+Fifth and final game! Please answer if the given number is prime or not. [Yes, you can!](https://asciinema.org/a/Dgf7xRpYx9b73I8kN6w721i9H)
+
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
 ![LinterCheck](https://github.com/igorkuznetsov1972/frontend-project-lvl1/workflows/LinterCheck/badge.svg?branch=master)
