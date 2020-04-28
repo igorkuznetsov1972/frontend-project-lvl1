@@ -7,7 +7,9 @@ This repository is created as a first training project by Igor Kuznetsov studyin
 In our first game you should answer if the given number is odd or even.
 [You may want to take a look at the installation and the gameplay](https://asciinema.org/a/t8F9ThznSDmr9PElas22zKsnD)
 
-In our second game you should give the result of a given expression. [Please, take a look!](https://asciinema.org/a/VW006d2uMT8k4oJe151MaFbxg)
+In our second game you should calculate the result of a given expression. [Please, take a look!](https://asciinema.org/a/VW006d2uMT8k4oJe151MaFbxg)
+
+In our third game you should give the greater common divider of two numbers. [Enjoy!]( https://asciinema.org/a/VCk2l9SeDdg6PgEL2TYuB3arw)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
