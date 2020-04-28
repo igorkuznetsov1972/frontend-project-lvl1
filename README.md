@@ -9,7 +9,9 @@ In our first game you should answer if the given number is odd or even.
 
 In our second game you should calculate the result of a given expression. [Please, take a look!](https://asciinema.org/a/VW006d2uMT8k4oJe151MaFbxg)
 
-In our third game you should give the greater common divider of two numbers. [Enjoy!]( https://asciinema.org/a/VCk2l9SeDdg6PgEL2TYuB3arw)
+In our third game you should find the greater common divider of two numbers. [Enjoy!]( https://asciinema.org/a/VCk2l9SeDdg6PgEL2TYuB3arw)
+
+In our fourth game you should  give the missing progression element. [Try it!](https://asciinema.org/a/SvBVMd0O8af74MQF2Run7Rz89)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
 
