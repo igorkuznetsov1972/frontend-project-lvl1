@@ -29,7 +29,7 @@ const doCalcOperation = () => {
 };
 
 const playCalcGame = () => {
-  const playerName = dialog.playerGreeting('What is the expectedAnswer of the expression ?');
+  const playerName = dialog.playerGreeting('What is the result of the expression ?');
   const gameData = () => {
     const {
       expectedAnswer, operator, firstNumber, secondNumber,
