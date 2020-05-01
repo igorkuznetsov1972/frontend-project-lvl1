@@ -1,21 +1,28 @@
 import readlineSync from 'readline-sync';
 
-const playerGreeting = () => {
+const playerGreeting = (gameRules) => {
   console.log('Welcome to the Brain games!');
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
+  console.log(gameRules);
   return playerName;
 };
-const wrongAnswer = (currentAnswer, expectedAnswer, playerName) => {
-  console.log(`${currentAnswer} is wrong answer ;(. Correct answer was ${expectedAnswer}.\nLet's try again, ${playerName}!`);
+const askQuestion = (question) => readlineSync.question(`Question: ${question} `);
+const gameFlow = (playerName, gameData) => {
+  for (let i = 0; i < 3; i += 1) {
+    const { expectedAnswer, currentAnswer } = gameData();
+    if (expectedAnswer === currentAnswer && i === 2) {
+      console.log(`Correct! \nCongratulations, ${playerName}`);
+      break;
+    }
+    if (expectedAnswer === currentAnswer) console.log('Correct!');
+    else {
+      console.log(`${currentAnswer} is wrong answer ;(. Correct answer was ${expectedAnswer}.\nLet's try again, ${playerName}!`);
+      break;
+    }
+  }
 };
-const invalidAnswer = (currentAnswer, playerName) => {
-  console.log(`"${currentAnswer}" is not a valid answer ;( \n
-Let's try again, ${playerName}!`);
-};
-const correctAnswer = () => console.log('Correct!');
-const lastCorrectAnswer = (playerName) => console.log(`Correct! \nCongratulations, ${playerName}`);
 
 export {
-  playerGreeting, wrongAnswer, correctAnswer, lastCorrectAnswer, invalidAnswer,
+  playerGreeting, askQuestion, gameFlow,
 };

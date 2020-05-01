@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import _ from 'lodash';
 import * as dialog from '../index.js';
 
@@ -20,28 +19,21 @@ const generateProgression = () => {
       hiddenNumber = nextNumber;
     } else progression.push(nextNumber);
   }
+  const expectedAnswer = String(hiddenNumber);
   return {
-    progression, hiddenNumber,
+    progression, expectedAnswer,
   };
 };
 
 const playProgressionGame = () => {
-  const playerName = dialog.playerGreeting();
-  console.log('What number is missing in the progression?');
-  for (let i = 0; i < 3; i += 1) {
+  const playerName = dialog.playerGreeting('What number is missing in the progression?');
+  const gameData = () => {
     const {
-      progression, hiddenNumber,
+      progression, expectedAnswer,
     } = generateProgression();
-    const currentAnswer = readlineSync.questionInt(`Question: ${progression}  `);
-    if (hiddenNumber === currentAnswer && i === 2) {
-      dialog.lastCorrectAnswer(playerName);
-      break;
-    }
-    if (hiddenNumber === currentAnswer) dialog.correctAnswer();
-    else {
-      dialog.wrongAnswer(currentAnswer, hiddenNumber, playerName);
-      break;
-    }
-  }
+    const currentAnswer = dialog.askQuestion(` ${progression}  `);
+    return { expectedAnswer, currentAnswer };
+  };
+  dialog.gameFlow(playerName, gameData);
 };
 export default playProgressionGame;

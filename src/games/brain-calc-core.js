@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import _ from 'lodash';
 import * as dialog from '../index.js';
 
@@ -23,28 +22,21 @@ const doCalcOperation = () => {
     default:
       break;
   }
+  expectedAnswer = String(expectedAnswer);
   return {
     expectedAnswer, operator, firstNumber, secondNumber,
   };
 };
 
 const playCalcGame = () => {
-  const playerName = dialog.playerGreeting();
-  console.log('What is the expectedAnswer of the expression ?');
-  for (let i = 0; i < 3; i += 1) {
+  const playerName = dialog.playerGreeting('What is the expectedAnswer of the expression ?');
+  const gameData = () => {
     const {
       expectedAnswer, operator, firstNumber, secondNumber,
     } = doCalcOperation();
-    const currentAnswer = readlineSync.questionInt(`Question: ${firstNumber} ${operator} ${secondNumber} `);
-    if (expectedAnswer === currentAnswer && i === 2) {
-      dialog.lastCorrectAnswer(playerName);
-      break;
-    }
-    if (expectedAnswer === currentAnswer) dialog.correctAnswer();
-    else {
-      dialog.wrongAnswer(currentAnswer, expectedAnswer, playerName);
-      break;
-    }
-  }
+    const currentAnswer = dialog.askQuestion(` ${firstNumber} ${operator} ${secondNumber} `);
+    return { expectedAnswer, currentAnswer };
+  };
+  dialog.gameFlow(playerName, gameData);
 };
 export default playCalcGame;
