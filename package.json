@@ -2,7 +2,7 @@
   "name": "frontend-project-lvl1",
   "version": "1.0.0",
   "description": "first hexlet project",
-  "keywords": "set of arithmetical cli games",
+  "keywords": [ "cli game", "logical game", "arithmetical game" ],
   "main": "./src/index.js",
   "bin": {
     "brain-games": "./bin/brain-games.js",
