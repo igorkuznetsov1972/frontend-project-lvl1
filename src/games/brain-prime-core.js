@@ -1,14 +1,14 @@
 import readlineSync from 'readline-sync';
 import _ from 'lodash';
-import * as dialog from '../src/index.js';
-import isEven from '../src/isEven.js';
+import * as dialog from '../index.js';
+import isPrime from '../isPrime.js';
 
-const playEvenGame = () => {
+const playPrimeGame = () => {
   const playerName = dialog.playerGreeting();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
-    const num = _.random(1, 1000);
-    const expectedAnswer = isEven(num) ? 'yes' : 'no';
+    const num = _.random(2, 4000);
+    const expectedAnswer = isPrime(num) ? 'yes' : 'no';
     const currentAnswer = readlineSync.question(`Question: ${num} `);
     if (expectedAnswer === currentAnswer && i === 2) {
       dialog.lastCorrectAnswer(playerName);
@@ -24,4 +24,4 @@ const playEvenGame = () => {
     }
   }
 };
-export default playEvenGame;
+export default playPrimeGame;

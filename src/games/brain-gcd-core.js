@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import findGcd from '../src/findGcd.js';
-import * as dialog from '../src/index.js';
+import findGcd from '../findGcd.js';
+import * as dialog from '../index.js';
 
 const playGcdGame = () => {
   const playerName = dialog.playerGreeting();

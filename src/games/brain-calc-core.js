@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import _ from 'lodash';
-import * as dialog from '../src/index.js';
+import * as dialog from '../index.js';
 
 const doCalcOperation = () => {
   const firstNumber = _.random(1000);
