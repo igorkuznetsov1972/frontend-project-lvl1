@@ -5,7 +5,8 @@ This repository is created as a first training project by Igor Kuznetsov studyin
 # frontend-project-lvl1 ####
 
 In our first game you should answer if the given number is odd or even.
-You may want to take a look at the installation and the gameplay<script id="asciicast-t8F9ThznSDmr9PElas22zKsnD" src="https://asciinema.org/a/t8F9ThznSDmr9PElas22zKsnD.js" async></script>
+You may want to take a look at the installation and the gameplay 
+<script id="asciicast-t8F9ThznSDmr9PElas22zKsnD" src="https://asciinema.org/a/t8F9ThznSDmr9PElas22zKsnD.js" async></script>
 
 In our second game you should calculate the result of a given expression. Please, take a look![![asciicast](https://asciinema.org/a/VW006d2uMT8k4oJe151MaFbxg.svg)](https://asciinema.org/a/VW006d2uMT8k4oJe151MaFbxg)
 
