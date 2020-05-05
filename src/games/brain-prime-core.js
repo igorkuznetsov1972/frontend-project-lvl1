@@ -2,7 +2,9 @@ import _ from 'lodash';
 import * as dialog from '../index.js';
 
 const isPrime = (num) => {
-  const finish = Math.floor(Math.sqrt(num));
+  if (num < 2) return false;
+  if (num === 2) return true;
+  const finish = Math.sqrt(num);
   for (let i = 2; i <= finish; i += 1) {
     if (num % i === 0) return false;
   }
