@@ -9,7 +9,7 @@ You may want to take a look at the installation and the gameplay[![asciicast](ht
 
 In our second game you should calculate the result of a given expression. Please, take a look!<a href="https://asciinema.org/a/VW006d2uMT8k4oJe151MaFbxg" target="_blank"><img src="https://asciinema.org/a/VW006d2uMT8k4oJe151MaFbxg.svg" /></a>
 
-In our third game you should find the greater common divider of two numbers. Enjoy!
+In our third game you should find the greater common divider of two numbers. Enjoy!<a href="https://asciinema.org/a/VCk2l9SeDdg6PgEL2TYuB3arw" target="_blank"><img src="https://asciinema.org/a/VCk2l9SeDdg6PgEL2TYuB3arw.svg" /></a>
 
 In our fourth game you should  give the missing progression element. Try it!
 
