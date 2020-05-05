@@ -1,18 +1,16 @@
 import _ from 'lodash';
-import * as dialog from '../index.js';
+import gameFlow from '../index.js';
 
-const generateProgression = () => {
-  const firstNumber = _.random(1000);
-  const incrementNumber = _.random(1000);
-  const hiddenNumberPosition = _.random(9);
+const generateProgression = (firstNumber, incrementNumber, hiddenNumberPosition) => {
   let hiddenNumber;
   const progression = [];
   if (hiddenNumberPosition === 0) {
     progression.push('..');
     hiddenNumber = firstNumber;
   } else progression.push(firstNumber);
+  const progressionLength = 10;
   let nextNumber = firstNumber;
-  for (let i = 1; i < 10; i += 1) {
+  for (let i = 1; i < progressionLength; i += 1) {
     nextNumber += incrementNumber;
     if (i === hiddenNumberPosition) {
       progression.push('..');
@@ -24,16 +22,18 @@ const generateProgression = () => {
     progression, expectedAnswer,
   };
 };
-
+const gameRules = 'What number is missing in the progression?';
+const gameData = () => {
+  const firstNumber = _.random(1000);
+  const incrementNumber = _.random(1000);
+  const hiddenNumberPosition = _.random(9);
+  const {
+    progression, expectedAnswer,
+  } = generateProgression(firstNumber, incrementNumber, hiddenNumberPosition);
+  const question = ` ${progression}  `;
+  return { expectedAnswer, question };
+};
 const playProgressionGame = () => {
-  const playerName = dialog.playerGreeting('What number is missing in the progression?');
-  const gameData = () => {
-    const {
-      progression, expectedAnswer,
-    } = generateProgression();
-    const currentAnswer = dialog.askQuestion(` ${progression}  `);
-    return { expectedAnswer, currentAnswer };
-  };
-  dialog.gameFlow(playerName, gameData);
+  gameFlow(gameRules, gameData);
 };
 export default playProgressionGame;

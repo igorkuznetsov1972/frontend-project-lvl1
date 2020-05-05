@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import * as dialog from '../index.js';
+import gameFlow from '../index.js';
 
 const isPrime = (num) => {
   if (num < 2) return false;
@@ -10,14 +10,14 @@ const isPrime = (num) => {
   }
   return true;
 };
+const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameData = () => {
+  const num = _.random(2, 4000);
+  const expectedAnswer = isPrime(num) ? 'yes' : 'no';
+  const question = ` ${num} `;
+  return { expectedAnswer, question };
+};
 const playPrimeGame = () => {
-  const playerName = dialog.playerGreeting('Answer "yes" if given number is prime. Otherwise answer "no".');
-  const gameData = () => {
-    const num = _.random(2, 4000);
-    const expectedAnswer = isPrime(num) ? 'yes' : 'no';
-    const currentAnswer = dialog.askQuestion(` ${num} `);
-    return { expectedAnswer, currentAnswer };
-  };
-  dialog.gameFlow(playerName, gameData);
+  gameFlow(gameRules, gameData);
 };
 export default playPrimeGame;

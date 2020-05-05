@@ -1,42 +1,35 @@
 import _ from 'lodash';
-import * as dialog from '../index.js';
+import gameFlow from '../index.js';
 
-const doCalcOperation = () => {
-  const firstNumber = _.random(1000);
-  const secondNumber = _.random(1000);
-  const operation = _.random(2);
-  let expectedAnswer; let operator;
-  switch (operation) {
-    case 0:
+const doCalcOperation = (firstNumber, secondNumber, chosenOperation) => {
+  let expectedAnswer;
+  switch (chosenOperation) {
+    case '+':
       expectedAnswer = firstNumber + secondNumber;
-      operator = '+';
       break;
-    case 1:
+    case '-':
       expectedAnswer = firstNumber - secondNumber;
-      operator = '-';
       break;
-    case 2:
+    case '*':
       expectedAnswer = firstNumber * secondNumber;
-      operator = '*';
       break;
     default:
       break;
   }
   expectedAnswer = String(expectedAnswer);
-  return {
-    expectedAnswer, operator, firstNumber, secondNumber,
-  };
+  return expectedAnswer;
 };
-
+const gameRules = 'What is the result of the expression ?';
+const gameData = () => {
+  const operators = ['+', '-', '*'];
+  const firstNumber = _.random(1000);
+  const secondNumber = _.random(1000);
+  const chosenOperation = operators[_.random(2)];
+  const expectedAnswer = doCalcOperation(firstNumber, secondNumber, chosenOperation);
+  const question = ` ${firstNumber} ${chosenOperation} ${secondNumber} `;
+  return { expectedAnswer, question };
+};
 const playCalcGame = () => {
-  const playerName = dialog.playerGreeting('What is the result of the expression ?');
-  const gameData = () => {
-    const {
-      expectedAnswer, operator, firstNumber, secondNumber,
-    } = doCalcOperation();
-    const currentAnswer = dialog.askQuestion(` ${firstNumber} ${operator} ${secondNumber} `);
-    return { expectedAnswer, currentAnswer };
-  };
-  dialog.gameFlow(playerName, gameData);
+  gameFlow(gameRules, gameData);
 };
 export default playCalcGame;
