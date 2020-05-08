@@ -1,31 +1,26 @@
 import _ from 'lodash';
 import gameFlow from '../index.js';
 
-const doCalcOperation = (firstNumber, secondNumber, chosenOperation) => {
-  let expectedAnswer;
-  switch (chosenOperation) {
+const doCalcOperation = (firstNumber, secondNumber, operation) => {
+  switch (operation) {
     case '+':
-      expectedAnswer = firstNumber + secondNumber;
-      break;
+      return firstNumber + secondNumber;
     case '-':
-      expectedAnswer = firstNumber - secondNumber;
-      break;
+      return firstNumber - secondNumber;
     case '*':
-      expectedAnswer = firstNumber * secondNumber;
-      break;
+      return firstNumber * secondNumber;
     default:
-      break;
+      throw new Error(`Unknown operation : '${operation}'!`);
   }
-  return expectedAnswer;
 };
 const gameDescription = 'What is the result of the expression ?';
+const operators = ['+', '-', '*'];
 const getGameData = () => {
-  const operators = ['+', '-', '*'];
   const firstNumber = _.random(1000);
   const secondNumber = _.random(1000);
-  const chosenOperation = operators[_.random(2)];
-  const expectedAnswer = (doCalcOperation(firstNumber, secondNumber, chosenOperation)).toString();
-  const question = `${firstNumber} ${chosenOperation} ${secondNumber}`;
+  const operation = operators[_.random(0, operators.length)];
+  const expectedAnswer = (doCalcOperation(firstNumber, secondNumber, operation)).toString();
+  const question = `${firstNumber} ${operation} ${secondNumber}`;
   return { expectedAnswer, question };
 };
 const playCalcGame = () => {
