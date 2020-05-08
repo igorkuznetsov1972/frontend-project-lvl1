@@ -3,9 +3,9 @@ import gameFlow from '../index.js';
 
 const isPrime = (num) => {
   if (num < 2) return false;
-  const finish = Math.sqrt(num);
-  for (let i = 2; i <= finish; i += 1) {
-    if (num % i === 0) return false;
+  const maxDivisor = Math.sqrt(num);
+  for (let divisor = 2; divisor <= maxDivisor; divisor += 1) {
+    if (num % divisor === 0) return false;
   }
   return true;
 };
