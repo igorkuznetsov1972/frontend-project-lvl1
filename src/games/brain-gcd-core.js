@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import gameFlow from '../index.js';
 
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 const findGcd = (firstNumber, secondNumber) => {
   let a = firstNumber;
   let b = secondNumber;
@@ -8,10 +9,9 @@ const findGcd = (firstNumber, secondNumber) => {
     if (a > b) a %= b;
     else b %= a;
   }
-  const expectedAnswer = (a + b);
-  return expectedAnswer;
+  const gcd = (a + b);
+  return gcd;
 };
-const gameDescription = 'Find the greatest common divisor of given numbers.';
 const getGameData = () => {
   const firstNumber = _.random(1000);
   const secondNumber = _.random(1000);

@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import gameFlow from '../index.js';
 
-const isEven = (num) => num % 2 === 0;
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+const isEven = (num) => num % 2 === 0;
 const getGameData = () => {
   const num = _.random(1, 1000);
   const expectedAnswer = isEven(num) ? 'yes' : 'no';

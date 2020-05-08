@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import gameFlow from '../index.js';
 
+const gameDescription = 'What is the result of the expression ?';
+const operators = ['+', '-', '*'];
 const doCalcOperation = (firstNumber, secondNumber, operation) => {
   switch (operation) {
     case '+':
@@ -13,8 +15,6 @@ const doCalcOperation = (firstNumber, secondNumber, operation) => {
       throw new Error(`Unknown operation : '${operation}'!`);
   }
 };
-const gameDescription = 'What is the result of the expression ?';
-const operators = ['+', '-', '*'];
 const getGameData = () => {
   const firstNumber = _.random(1000);
   const secondNumber = _.random(1000);

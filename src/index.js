@@ -6,7 +6,7 @@ const gameFlow = (gameDescription, getGameData) => {
   const playerName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${playerName}!`);
   console.log(gameDescription);
-  for (let i = 0; i < numberOfRounds; i += 1) {
+  for (let roundNumber = 0; roundNumber < numberOfRounds; roundNumber += 1) {
     const { expectedAnswer, question } = getGameData();
     console.log(`Question: ${question} `);
     const currentAnswer = readlineSync.question('Your answer:');
