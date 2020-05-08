@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import gameFlow from '../index.js';
 
+const gameDescription = 'What number is missing in the progression?';
+const progressionLength = 10;
 const generateProgression = (firstNumber, incrementNumber, hiddenNumberPosition) => {
   let hiddenNumber;
   const progression = [];
@@ -8,11 +10,10 @@ const generateProgression = (firstNumber, incrementNumber, hiddenNumberPosition)
     progression.push('..');
     hiddenNumber = firstNumber;
   } else progression.push(firstNumber);
-  const progressionLength = 10;
   let nextNumber = firstNumber;
-  for (let i = 1; i < progressionLength; i += 1) {
+  for (let position = 1; position < progressionLength; position += 1) {
     nextNumber += incrementNumber;
-    if (i === hiddenNumberPosition) {
+    if (position === hiddenNumberPosition) {
       progression.push('..');
       hiddenNumber = nextNumber;
     } else progression.push(nextNumber);
@@ -21,15 +22,14 @@ const generateProgression = (firstNumber, incrementNumber, hiddenNumberPosition)
     progression, hiddenNumber,
   };
 };
-const gameDescription = 'What number is missing in the progression?';
 const getGameData = () => {
   const firstNumber = _.random(1000);
   const incrementNumber = _.random(1000);
-  const hiddenNumberPosition = _.random(9);
+  const hiddenNumberPosition = _.random(0, progressionLength);
   const {
     progression, hiddenNumber,
   } = generateProgression(firstNumber, incrementNumber, hiddenNumberPosition);
-  const question = `${progression}`;
+  const question = progression;
   const expectedAnswer = hiddenNumber.toString();
   return { expectedAnswer, question };
 };
