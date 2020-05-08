@@ -17,9 +17,8 @@ const generateProgression = (firstNumber, incrementNumber, hiddenNumberPosition)
       hiddenNumber = nextNumber;
     } else progression.push(nextNumber);
   }
-  const expectedAnswer = String(hiddenNumber);
   return {
-    progression, expectedAnswer,
+    progression, hiddenNumber,
   };
 };
 const gameDescription = 'What number is missing in the progression?';
@@ -28,9 +27,10 @@ const getGameData = () => {
   const incrementNumber = _.random(1000);
   const hiddenNumberPosition = _.random(9);
   const {
-    progression, expectedAnswer,
+    progression, hiddenNumber,
   } = generateProgression(firstNumber, incrementNumber, hiddenNumberPosition);
   const question = `${progression}`;
+  const expectedAnswer = hiddenNumber.toString();
   return { expectedAnswer, question };
 };
 const playProgressionGame = () => {
