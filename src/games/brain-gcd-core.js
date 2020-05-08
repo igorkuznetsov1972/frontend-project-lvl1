@@ -8,14 +8,14 @@ const findGcd = (firstNumber, secondNumber) => {
     if (a > b) a %= b;
     else b %= a;
   }
-  const expectedAnswer = String(a + b);
+  const expectedAnswer = (a + b);
   return expectedAnswer;
 };
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 const getGameData = () => {
   const firstNumber = _.random(1000);
   const secondNumber = _.random(1000);
-  const expectedAnswer = findGcd(firstNumber, secondNumber);
+  const expectedAnswer = (findGcd(firstNumber, secondNumber)).toString();
   const question = `${firstNumber} ${secondNumber}`;
   return { expectedAnswer, question };
 };
