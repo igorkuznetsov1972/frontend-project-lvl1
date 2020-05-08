@@ -19,7 +19,7 @@ const doCalcOperation = (firstNumber, secondNumber, chosenOperation) => {
   expectedAnswer = String(expectedAnswer);
   return expectedAnswer;
 };
-const gameRules = 'What is the result of the expression ?';
+const gameDescription = 'What is the result of the expression ?';
 const gameData = () => {
   const operators = ['+', '-', '*'];
   const firstNumber = _.random(1000);
@@ -30,6 +30,6 @@ const gameData = () => {
   return { expectedAnswer, question };
 };
 const playCalcGame = () => {
-  gameFlow(gameRules, gameData);
+  gameFlow(gameDescription, gameData);
 };
 export default playCalcGame;

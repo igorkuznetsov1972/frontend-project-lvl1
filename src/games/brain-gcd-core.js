@@ -11,7 +11,7 @@ const findGcd = (firstNumber, secondNumber) => {
   const expectedAnswer = String(a + b);
   return expectedAnswer;
 };
-const gameRules = 'Find the greatest common divisor of given numbers.';
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 const gameData = () => {
   const firstNumber = _.random(1000);
   const secondNumber = _.random(1000);
@@ -20,6 +20,6 @@ const gameData = () => {
   return { expectedAnswer, question };
 };
 const playGcdGame = () => {
-  gameFlow(gameRules, gameData);
+  gameFlow(gameDescription, gameData);
 };
 export default playGcdGame;
