@@ -23,7 +23,7 @@ const generateProgression = (firstNumber, incrementNumber, hiddenNumberPosition)
   };
 };
 const gameDescription = 'What number is missing in the progression?';
-const gameData = () => {
+const getGameData = () => {
   const firstNumber = _.random(1000);
   const incrementNumber = _.random(1000);
   const hiddenNumberPosition = _.random(9);
@@ -34,6 +34,6 @@ const gameData = () => {
   return { expectedAnswer, question };
 };
 const playProgressionGame = () => {
-  gameFlow(gameDescription, gameData);
+  gameFlow(gameDescription, getGameData);
 };
 export default playProgressionGame;

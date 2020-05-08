@@ -11,13 +11,13 @@ const isPrime = (num) => {
   return true;
 };
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const gameData = () => {
+const getGameData = () => {
   const num = _.random(2, 4000);
   const expectedAnswer = isPrime(num) ? 'yes' : 'no';
   const question = ` ${num} `;
   return { expectedAnswer, question };
 };
 const playPrimeGame = () => {
-  gameFlow(gameDescription, gameData);
+  gameFlow(gameDescription, getGameData);
 };
 export default playPrimeGame;
