@@ -16,7 +16,7 @@ const getGameData = () => {
   const firstNumber = _.random(1000);
   const secondNumber = _.random(1000);
   const expectedAnswer = findGcd(firstNumber, secondNumber);
-  const question = ` ${firstNumber} ${secondNumber} `;
+  const question = `${firstNumber} ${secondNumber}`;
   return { expectedAnswer, question };
 };
 const playGcdGame = () => {

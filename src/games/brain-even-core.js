@@ -6,7 +6,7 @@ const gameDescription = 'Answer "yes" if the number is even, otherwise answer "n
 const getGameData = () => {
   const num = _.random(1, 1000);
   const expectedAnswer = isEven(num) ? 'yes' : 'no';
-  const question = ` ${num} `;
+  const question = num;
   return { expectedAnswer, question };
 };
 const playEvenGame = () => {

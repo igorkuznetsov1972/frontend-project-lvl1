@@ -26,7 +26,7 @@ const getGameData = () => {
   const secondNumber = _.random(1000);
   const chosenOperation = operators[_.random(2)];
   const expectedAnswer = doCalcOperation(firstNumber, secondNumber, chosenOperation);
-  const question = ` ${firstNumber} ${chosenOperation} ${secondNumber} `;
+  const question = `${firstNumber} ${chosenOperation} ${secondNumber}`;
   return { expectedAnswer, question };
 };
 const playCalcGame = () => {

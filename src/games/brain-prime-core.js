@@ -14,7 +14,7 @@ const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer
 const getGameData = () => {
   const num = _.random(2, 4000);
   const expectedAnswer = isPrime(num) ? 'yes' : 'no';
-  const question = ` ${num} `;
+  const question = num;
   return { expectedAnswer, question };
 };
 const playPrimeGame = () => {

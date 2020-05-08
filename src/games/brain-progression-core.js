@@ -30,7 +30,7 @@ const getGameData = () => {
   const {
     progression, expectedAnswer,
   } = generateProgression(firstNumber, incrementNumber, hiddenNumberPosition);
-  const question = ` ${progression}  `;
+  const question = `${progression}`;
   return { expectedAnswer, question };
 };
 const playProgressionGame = () => {
