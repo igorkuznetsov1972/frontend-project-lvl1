@@ -4,6 +4,7 @@ This repository is created as a first training project by Igor Kuznetsov studyin
 
 # frontend-project-lvl1 ####
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/d30f058e466a53678569/maintainability)](https://codeclimate.com/github/igorkuznetsov1972/frontend-project-lvl1/maintainability) [![LinterCheck](https://github.com/igorkuznetsov1972/frontend-project-lvl1/workflows/LinterCheck/badge.svg?branch=master)](https://github.com/igorkuznetsov1972/frontend-project-lvl1/actions?query=workflow%3ALinterCheck)
 In our first game you should answer if the given number is odd or even.
 You may want to take a look at the installation and the gameplay\
 <a href="https://asciinema.org/a/t8F9ThznSDmr9PElas22zKsnD" target="_blank"><img src="https://asciinema.org/a/t8F9ThznSDmr9PElas22zKsnD.svg" width="500" /></a>
@@ -20,6 +21,4 @@ In our fourth game you should  give the missing progression element. Try it!\
 Fifth and final game! Please answer if the given number is prime or not. Yes, you can!\
 <a href="https://asciinema.org/a/Dgf7xRpYx9b73I8kN6w721i9H" target="_blank"><img src="https://asciinema.org/a/Dgf7xRpYx9b73I8kN6w721i9H.svg" width="500" /></a>
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/d30f058e466a53678569/maintainability)](https://codeclimate.com/github/igorkuznetsov1972/frontend-project-lvl1/maintainability)
 
-[![LinterCheck](https://github.com/igorkuznetsov1972/frontend-project-lvl1/workflows/LinterCheck/badge.svg?branch=master)](https://github.com/igorkuznetsov1972/frontend-project-lvl1/actions?query=workflow%3ALinterCheck)
