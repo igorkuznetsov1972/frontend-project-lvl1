@@ -18,7 +18,7 @@ const doCalcOperation = (firstNumber, secondNumber, operation) => {
 const getGameData = () => {
   const firstNumber = _.random(1000);
   const secondNumber = _.random(1000);
-  const operation = operators[_.random(0, operators.length)];
+  const operation = operators[_.random(0, operators.length - 1)];
   const expectedAnswer = doCalcOperation(firstNumber, secondNumber, operation).toString();
   const question = `${firstNumber} ${operation} ${secondNumber}`;
   return { expectedAnswer, question };
