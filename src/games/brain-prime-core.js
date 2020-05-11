@@ -13,7 +13,7 @@ const isPrime = (num) => {
 const getGameData = () => {
   const num = _.random(2, 4000);
   const expectedAnswer = isPrime(num) ? 'yes' : 'no';
-  const question = num;
+  const question = String(num);
   return { expectedAnswer, question };
 };
 const playPrimeGame = () => {
