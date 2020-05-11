@@ -3,34 +3,21 @@ import gameFlow from '../index.js';
 
 const gameDescription = 'What number is missing in the progression?';
 const progressionLength = 10;
-const generateProgression = (firstNumber, incrementNumber, hiddenNumberPosition) => {
-  let hiddenNumber;
-  const progression = [];
-  if (hiddenNumberPosition === 0) {
-    progression.push('..');
-    hiddenNumber = firstNumber;
-  } else progression.push(firstNumber);
-  let nextNumber = firstNumber;
+const generateProgression = (firstNumber, difference) => {
+  const progression = [firstNumber];
   for (let position = 1; position < progressionLength; position += 1) {
-    nextNumber += incrementNumber;
-    if (position === hiddenNumberPosition) {
-      progression.push('..');
-      hiddenNumber = nextNumber;
-    } else progression.push(nextNumber);
+    progression.push(firstNumber + (position * difference));
   }
-  return {
-    progression, hiddenNumber,
-  };
+  return progression;
 };
 const getGameData = () => {
   const firstNumber = _.random(1000);
-  const incrementNumber = _.random(1000);
-  const hiddenNumberPosition = _.random(0, progressionLength);
-  const {
-    progression, hiddenNumber,
-  } = generateProgression(firstNumber, incrementNumber, hiddenNumberPosition);
-  const question = progression;
-  const expectedAnswer = hiddenNumber.toString();
+  const difference = _.random(1000);
+  const hiddenNumberPosition = _.random(0, progressionLength - 1);
+  const progression = generateProgression(firstNumber, difference);
+  const expectedAnswer = progression[hiddenNumberPosition].toString();
+  progression.splice(hiddenNumberPosition, 1, '..');
+  const question = progression.join(' ');
   return { expectedAnswer, question };
 };
 const playProgressionGame = () => {
