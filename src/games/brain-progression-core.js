@@ -15,7 +15,7 @@ const getGameData = () => {
   const difference = _.random(1000);
   const hiddenMemberPosition = _.random(0, progressionLength - 1);
   const progression = generateProgression(firstMember, difference);
-  const expectedAnswer = progression.splice(hiddenMemberPosition, 1, '..').join('');
+  const expectedAnswer = progression.splice(hiddenMemberPosition, 1, '..').toString();
   const question = progression.join(' ');
   return { expectedAnswer, question };
 };
