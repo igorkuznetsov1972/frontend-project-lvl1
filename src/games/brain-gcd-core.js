@@ -3,14 +3,8 @@ import gameFlow from '../index.js';
 
 const gameDescription = 'Find the greatest common divisor of given numbers.';
 const findGcd = (firstNumber, secondNumber) => {
-  let a = firstNumber;
-  let b = secondNumber;
-  while (a !== 0 && b !== 0) {
-    if (a > b) a %= b;
-    else b %= a;
-  }
-  const gcd = (a + b);
-  return gcd;
+  if (secondNumber === 0) return firstNumber;
+  return findGcd(secondNumber, firstNumber % secondNumber);
 };
 const getGameData = () => {
   const firstNumber = _.random(1000);
