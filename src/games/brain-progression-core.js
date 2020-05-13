@@ -4,8 +4,8 @@ import gameFlow from '../index.js';
 const gameDescription = 'What number is missing in the progression?';
 const progressionLength = 10;
 const generateProgression = (firstMember, difference) => {
-  const progression = [firstMember];
-  for (let position = 1; position < progressionLength; position += 1) {
+  const progression = [];
+  for (let position = 0; position < progressionLength; position += 1) {
     progression.push(firstMember + (position * difference));
   }
   return progression;
@@ -15,8 +15,7 @@ const getGameData = () => {
   const difference = _.random(1000);
   const hiddenMemberPosition = _.random(0, progressionLength - 1);
   const progression = generateProgression(firstMember, difference);
-  const expectedAnswer = progression[hiddenMemberPosition].toString();
-  progression.splice(hiddenMemberPosition, 1, '..');
+  const expectedAnswer = progression.splice(hiddenMemberPosition, 1, '..').join('');
   const question = progression.join(' ');
   return { expectedAnswer, question };
 };
